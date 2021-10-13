@@ -30,6 +30,10 @@ header {
   grid-template-areas: "left center right";
 }
 
+header h1 {
+  margin: 1%;
+}
+
 header .logo {
   float: none;
   display: block;
@@ -62,10 +66,34 @@ header .add {
   margin: 0;
 }
 
-.menu-item h4 {
-  margin-left: 10%;
+.menu-item h3 {
+  margin: 0;
+  border-bottom: 1px solid lightgrey;
+  padding: 2%;
 }
 
+.menu-item h4 {
+  margin: 0;
+  padding: 2% 2% 2% 10%;
+  border-bottom: 1px solid lightgrey
+}
+
+.menu-shaded {
+  background-color: rgb(241, 235, 235);
+}
+
+.content {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(230, 230, 230);
+  text-align: center;
+}
 
 
 @media only screen and (min-width: 800px) {
