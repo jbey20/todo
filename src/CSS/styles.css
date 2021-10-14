@@ -2,6 +2,10 @@ body {
   margin: 0;
 }
 
+.page-title {
+  margin: 2% 0% 2% 1%;
+}
+
 /* #region Remove button Styling */
 button, input[type="submit"], input[type="reset"] {
 	background: none;
@@ -66,24 +70,57 @@ header .add {
   margin: 0;
 }
 
-.menu-item h3 {
+/* .menu-item h3 {
   margin: 0;
   border-bottom: 1px solid lightgrey;
   padding: 2%;
-}
+} */
 
-.menu-item h4 {
+/* .menu-item h4 {
   margin: 0;
   padding: 2% 2% 2% 10%;
   border-bottom: 1px solid lightgrey
+} */
+
+.item-box {
+  margin: -1px 0 0 0;
+  padding: 2%;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+
+.indented {
+  padding-left: 10%;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+}
+
+.task-item p {
+  margin: 0 0 0 2%;
+}
+
+.task-add-btn {
+  position: fixed;
+  bottom: 4%;
+  right: 4%;
+  color: rgb(151, 18, 18);
+}
+
+.done {
+  text-decoration: line-through;
 }
 
 .menu-shaded {
   background-color: rgb(241, 235, 235);
+  display: flex;
+  justify-content: space-between;
 }
 
-.content {
-  display: none;
+.menu-icon-right {
+  margin-right: 4vw;
 }
 
 footer {
@@ -94,6 +131,23 @@ footer {
   background-color: rgb(230, 230, 230);
   text-align: center;
 }
+
+.hidden {
+  display: none;
+}
+
+.clickable {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.clickable:hover {
+  transform: translate(0, -2px);
+  color: rgb(20, 44, 114);
+}
+
+.grow { transition: all .1s ease-in-out; }
+.grow:hover { transform: scale(1.5); }
 
 
 @media only screen and (min-width: 800px) {
