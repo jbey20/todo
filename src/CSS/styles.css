@@ -171,6 +171,67 @@ footer {
 .grow { transition: all .1s ease-in-out; }
 .grow:hover { transform: scale(1.5); }
 
+.blurred {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
+
+/* #region Taskview */
+  .taskview {
+    display: grid;
+    grid-template-areas: 
+      "project project"
+      "taskname taskname"
+      "description description"
+      "date priority"
+      "notes notes"
+      "notes notes"
+      "checklist checklist";
+  }
+  .task-project {
+    grid-area: project;
+  }
+
+  .task-name {
+    grid-area: taskname;
+  }
+
+  .task-description {
+    grid-area: description;
+  }
+
+  .task-date {
+    grid-area: date
+  }
+
+  .task-priority {
+    grid-area: priority;
+  }
+
+  .task-notes {
+    grid-area: notes;
+  }
+
+  .task-checklist {
+    grid-area: checklist;
+  }
+
+  .taskview p {
+    margin: 0;
+  }
+
+  .styled-input {
+    border: none;
+    color: black;
+  }
+
+  .styled-input::placeholder {
+    color: black;
+    opacity: 1;
+  }
+
+/* #endregion */
+
 
 @media only screen and (min-width: 800px) {
   body {
