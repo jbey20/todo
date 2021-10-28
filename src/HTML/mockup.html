@@ -59,38 +59,43 @@
     
   </div>
 
-  <div class="content hidden">
+  <div class="content ">
     <h2 class="page-title">Sample Project</h2>
     <div class="task-item item-box clickable">
-      <span>
-        <i class="fa fa-circle-o clickable grow" aria-hidden="true"></i>
-        <p class="">Sample task 1</p>
+      <i class="fa fa-circle-o clickable grow task-checkcircle-icon" aria-hidden="true"></i>
+      <p class="task-name">Sample task 1</p>
+      <span class="task-date"><p class="task-date">10/20/2021 9:00am</p></span>
+      <span class="task-icon-area">
+        <i class="task-priority-icon">!</i>
+        <i class="fa fa-check-square-o fa-sm task-checkbox-icon" aria-hidden="true"></i>
       </span>
-      <span><p>10/20/2021 9:00am</p></span>
+
     </div>
     <div class="task-item item-box clickable">
       <i class="fa fa-circle-o clickable grow" aria-hidden="true"></i>
-      <p class="">Sample task 2</p>
+      <p class="task-name">Sample task 2</p>
+      <span class="task-date"><p class="task-date">10/20/2021 9:00am</p></span>
     </div>
     <div class="task-item item-box clickable">
       <i class="fa fa-check-circle-o clickable grow" aria-hidden="true"></i>
-      <p class="done">Sample task 3</p>
+      <p class="task-name done">Sample task 3</p>
+      <span class="task-date"><p class="task-date">10/20/2021 9:00am</p></span>
     </div>
 
     <i class="fa fa-3x fa-plus-circle task-add-btn" aria-hidden="true"></i>
   </div>
 
-  <div class="taskview">
-    <p class="task-project">Sample Project</p>
+  <div class="edit-task-view hidden">
+    <p class="edit-task-project">Sample Project</p>
     <span>
       <i class="fa fa-circle-o clickable grow" aria-hidden="true"></i>
-      <input class="task-name styled-input" placeholder="Complete Todo GUI">
+      <input class="edit-task-name styled-input" placeholder="Complete Todo GUI">
     </span>
-    <input class="task-description styled-input" placeholder="Enter your description here.">
-    <p class="date-text task-date">10/26/2021</p>
-    <p class="task-priority priority-high">priority</p>
-    <p class="task-notes">Notes get put here.</p>
-    <p class="task-checklist">checklist will go here</p>
+    <input class="edit-task-description styled-input" placeholder="Enter your description here.">
+    <p class="date-text edit-task-date">10/26/2021</p>
+    <p class="edit-task-priority priority-high">priority</p>
+    <p class="edit-task-notes">Notes get put here.</p>
+    <p class="edit-task-checklist">checklist will go here</p>
   </div>
   
   <footer class="footer"><small>&copy; Copyright 2021, jbey20. All rights reserved.</small></footer>

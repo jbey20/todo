@@ -2,9 +2,7 @@ body {
   margin: 0;
 }
 
-.page-title {
-  margin: 2% 0% 2% 1%;
-}
+
 
 /* #region Remove button Styling */
 button, input[type="submit"], input[type="reset"] {
@@ -16,7 +14,7 @@ button, input[type="submit"], input[type="reset"] {
 	cursor: pointer;
 	outline: inherit;
 }
-/*#endregion*/
+/* #endregion */
 
 button {
   background-color: #ffffff00;
@@ -82,33 +80,7 @@ header .add {
   border-bottom: 1px solid lightgrey
 } */
 
-.item-box {
-  margin: -1px 0 0 0;
-  padding: 2%;
-  border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
-}
 
-.indented {
-  padding-left: 10%;
-}
-
-.task-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.task-item p {
-  margin: 0 0 0 2%;
-}
-
-.task-add-btn {
-  position: fixed;
-  bottom: 4%;
-  right: 4%;
-  color: rgb(151, 18, 18);
-}
 
 .done {
   text-decoration: line-through;
@@ -155,8 +127,83 @@ footer {
   -webkit-filter: blur(10px);
 }
 
-/* #region Taskview */
-  .taskview {
+/* #region Project View */
+.page-title {
+  margin: 3% 2% 3% 2%;
+}
+
+.item-box {
+  margin: -1px 0 0 0;
+  padding: 2%;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+
+.indented {
+  padding-left: 10%;
+}
+
+.task-item {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 1fr 10fr 4fr;
+  grid-template-areas: 
+    "gridCircle gridTitle gridDate"
+    ".......... gridIcons ........";
+}
+
+.task-item p {
+  margin: 0;
+}
+
+.task-item .task-name {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  grid-area: gridTitle;
+}
+
+.task-checkcircle-icon {
+  grid-area: gridCircle;
+}
+
+.task-title {
+  padding-left: 5%;
+}
+
+.task-date {
+  color: rgb(90, 90, 90);
+  font-size: smaller;
+  justify-self: flex-end;
+  text-align: right;
+  width: 100%;
+  grid-area: gridDate;
+}
+
+.task-icon-area {
+  grid-area: gridIcons;
+}
+
+.task-checkbox-icon {
+  color: gray;
+  font-size: 4px;
+}
+
+.task-add-btn {
+  position: fixed;
+  bottom: 4%;
+  right: 4%;
+  color: rgb(151, 18, 18);
+}
+
+/* #endregion */
+
+/* #region Edit Task View */
+  .edit-task-view {
     display: grid;
     grid-template-areas: 
       "project project"
@@ -167,35 +214,35 @@ footer {
       "notes notes"
       "checklist checklist";
   }
-  .task-project {
+  .edit-task-project {
     grid-area: project;
   }
 
-  .task-name {
+  .edit-task-name {
     grid-area: taskname;
   }
 
-  .task-description {
+  .edit-task-description {
     grid-area: description;
   }
 
-  .task-date {
+  .edit-task-date {
     grid-area: date
   }
 
-  .task-priority {
+  .edit-task-priority {
     grid-area: priority;
   }
 
-  .task-notes {
+  .edit-task-notes {
     grid-area: notes;
   }
 
-  .task-checklist {
+  .edit-task-checklist {
     grid-area: checklist;
   }
 
-  .taskview p {
+  .edit-task-view p {
     margin: 0;
   }
 
@@ -253,5 +300,8 @@ footer {
   }
 }
 
+.hidden {
+  display: none;
+}
 
 
