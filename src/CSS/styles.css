@@ -97,10 +97,31 @@ header .add {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .task-item p {
   margin: 0 0 0 2%;
+}
+
+.task-item .task-name {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.task-title {
+  padding-left: 5%;
+}
+
+.task-date {
+  color: lightgrey;
+  font-size: smaller;
+  justify-self: flex-end;
+  text-align: right;
+  width: 100%;
 }
 
 .task-add-btn {
