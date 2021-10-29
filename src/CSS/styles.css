@@ -134,7 +134,7 @@ footer {
 
 .item-box {
   margin: -1px 0 0 0;
-  padding: 2%;
+  padding: 2% 2% 1% 2%;
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
 }
@@ -186,6 +186,13 @@ footer {
 
 .task-icon-area {
   grid-area: gridIcons;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.task-icon-area * {
+  padding-left: 2%;
 }
 
 .task-checkbox-icon {
@@ -206,20 +213,34 @@ footer {
   .edit-task-view {
     display: grid;
     grid-template-areas: 
-      "project project"
-      "taskname taskname"
+      "taskname    taskname"
+      "project     ........"
       "description description"
-      "date priority"
-      "notes notes"
-      "notes notes"
-      "checklist checklist";
+      "date        priority"
+      "notes       notes"
+      "notes       notes"
+      "checklist   checklist";
+    margin: 5%;
   }
+
+  .edit-task-view > * {
+    margin: 3% 0 3% 0;
+  }
+
   .edit-task-project {
     grid-area: project;
+    background: none;
   }
 
   .edit-task-name {
     grid-area: taskname;
+    display: flex;
+    align-items: center;
+  }
+
+  .edit-task-name input {
+    font-size: large;
+    margin-left: 3%;
   }
 
   .edit-task-description {
@@ -227,11 +248,14 @@ footer {
   }
 
   .edit-task-date {
-    grid-area: date
+    grid-area: date;
+    width: fit-content;
+    height: fit-content;
   }
 
   .edit-task-priority {
     grid-area: priority;
+    justify-self: end;
   }
 
   .edit-task-notes {
@@ -240,20 +264,61 @@ footer {
 
   .edit-task-checklist {
     grid-area: checklist;
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+  }
+
+  .subtask-title {
+    grid-column: 1 / 3;
+    margin: 0;
   }
 
   .edit-task-view p {
     margin: 0;
   }
 
-  .styled-input {
+  .destyled-input {
     border: none;
-    color: black;
+    -webkit-appearance:     none;
+    -moz-appearance:        none;
+    -ms-appearance:         none;
+    -o-appearance:          none;
+    appearance:             none;
   }
 
-  .styled-input::placeholder {
+  .destyled-input::placeholder {
     color: black;
     opacity: 1;
+  }
+
+  .priority-high {
+    background: red;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 5%;
+    font-weight: bold;
+  }
+
+  .priority-medium {
+    background: rgb(255, 166, 0);
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 5%;
+    font-weight: bold;
+  }
+ 
+  .priority-low {
+    background: yellowgreen;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 5%;
+    font-weight: bold;
   }
 
 /* #endregion */

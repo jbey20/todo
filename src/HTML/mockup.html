@@ -59,7 +59,7 @@
     
   </div>
 
-  <div class="content ">
+  <div class="content hidden">
     <h2 class="page-title">Sample Project</h2>
     <div class="task-item item-box clickable">
       <i class="fa fa-circle-o clickable grow task-checkcircle-icon" aria-hidden="true"></i>
@@ -85,18 +85,33 @@
     <i class="fa fa-3x fa-plus-circle task-add-btn" aria-hidden="true"></i>
   </div>
 
-  <div class="edit-task-view hidden">
-    <p class="edit-task-project">Sample Project</p>
-    <span>
-      <i class="fa fa-circle-o clickable grow" aria-hidden="true"></i>
-      <input class="edit-task-name styled-input" placeholder="Complete Todo GUI">
+  <form action="#" class="edit-task-view ">
+    <span class="edit-task-name">
+      <i class="fa fa-circle-o fa-lg clickable grow" aria-hidden="true"></i>
+      <input class="destyled-input" placeholder="Complete Todo GUI">
     </span>
-    <input class="edit-task-description styled-input" placeholder="Enter your description here.">
-    <p class="date-text edit-task-date">10/26/2021</p>
-    <p class="edit-task-priority priority-high">priority</p>
-    <p class="edit-task-notes">Notes get put here.</p>
-    <p class="edit-task-checklist">checklist will go here</p>
-  </div>
+    <!-- <label for="project">Project</label> -->
+    <select name="project" id="project" class="destyled-input edit-task-project">
+      <option value="Sample Project 1">Sample Project 1</option>
+      <option value="Sample Project 2">Sample Project 2</option>
+      <option value="Sample Project 3">Sample Project 3</option>
+    </select>
+    <input class="edit-task-description destyled-input" placeholder="Enter your description here.">
+    <input type="date" class="date-text edit-task-date ">
+    <p class="edit-task-priority priority-medium">High Priority</p>
+    <textarea rows="10" class="edit-task-notes">Notes get put here.</textarea>
+    <div class="edit-task-checklist checklist-area">
+      <h3 class="subtask-title">Subtasks</h3>
+      <i class="fa fa-check-square-o" aria-hidden="true"></i>
+      <p>subtask item 1</p>
+      <i class="fa fa-square-o" aria-hidden="true"></i>
+      <p>subtask item 2</p>
+      <i class="fa fa-square-o" aria-hidden="true"></i>
+      <p>subtask item 3</p>
+      <i class="fa fa-square-o" aria-hidden="true"></i>
+      <p>subtask item 4</p>
+    </div>
+  </form>
   
   <footer class="footer"><small>&copy; Copyright 2021, jbey20. All rights reserved.</small></footer>
   <!-- <script src="main.js"></script> -->
