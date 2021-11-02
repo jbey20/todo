@@ -1,4 +1,7 @@
 import { Project } from './JavaScript/factories.js'
+import './CSS/styles.css'
+import { loadHeader } from './JavaScript/header.js';
+import { loadMenu } from './JavaScript/menu.js';
 
 const project = Project("TestProject", "This is a test", "#0000ff");
 console.log(project.getProps());
@@ -25,4 +28,5 @@ console.log(project.getProps());
 // todoTwo.moveCheckBox(0, 'down');
 // console.log(todoTwo.getProps());
 
-
+loadHeader();
+loadMenu();

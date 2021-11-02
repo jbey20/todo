@@ -402,9 +402,10 @@ footer {
       "menu content content"
       "footer footer footer";
     grid-template-rows: auto 1fr 1fr 1fr 1fr auto;
-
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 0;
     min-height: 100vh;
+    min-width: 100vw;
     /* overflow: scroll; */
   }
   
@@ -433,7 +434,7 @@ footer {
   
   .menu {
     grid-area: menu;
-    background-color:rgba(168, 168, 168, 0.185);
+    background-color:rgba(0, 140, 255, 0.226);
     height: 100%;
   }
 
