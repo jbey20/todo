@@ -197,11 +197,12 @@ footer {
 
 .task-icon-area * {
   padding-left: 2%;
+  padding-top: 1%;
 }
 
 .task-checkbox-icon {
   color: gray;
-  font-size: 4px;
+  
 }
 
 .task-add-btn {
@@ -391,6 +392,8 @@ footer {
 
 /* #endregion */
 
+
+/* #region Desktop */
 @media only screen and (min-width: 800px) {
   body {
     display: grid;
@@ -434,16 +437,13 @@ footer {
   
   .menu {
     grid-area: menu;
-    background-color:rgba(0, 140, 255, 0.226);
+    background-color:rgba(0, 59, 223, 0.507);
     height: 100%;
   }
-
-
   
   .content {
     grid-area: content;
   }
-
 
   .new-task {
     display: grid;
@@ -464,7 +464,10 @@ footer {
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
   }
+
+  .task-add-btn {display: none};
 }
+/* #endregion */
 
 .hidden {
   display: none;
